@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 28px 16px;
+    background: var(--background);
+    color: var(--body-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: min(100%, 430px);
+    margin: 0 auto;
+    padding: 38px 34px 32px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 18px 42px rgba(35, 95, 88, .12);
+}
+
+.brand-mark {
+    margin: 0 0 22px;
+    color: var(--main-color);
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.container h1 {
+    margin: 0;
+    color: var(--heading);
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.7rem, 5vw, 2.15rem);
+    line-height: 1.2;
+}
+
+.login-subtitle {
+    margin: 9px 0 28px;
+    color: var(--muted-text);
+    font-size: .92rem;
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 13px 44px 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    outline: none;
+    background: var(--input-surface);
+    color: var(--body-text);
+    font-size: .95rem;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.login-container input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(21, 126, 117, .12);
+}
+
+.login-container input::placeholder {
+    color: var(--placeholder);
+    font-size: .9rem;
+}
+
+.login-container i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--main-color);
+    font-size: 1.15rem;
+}
+
+.remember-container {
+    margin: 2px 0 22px;
+    color: var(--muted-text);
+    font-size: .82rem;
+    text-align: left;
+}
+
+.remember-container label input{
+    accent-color: var(--main-color);
+    margin: 0 7px 0 0;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 13px 16px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--main-color);
+    color: var(--button-text);
+    font-size: .95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--main-hover);
+}
+
+.forgot-password-container {
+    margin-top: 18px;
+}
+
+.forgot-password-container a {
+    color: var(--links);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.forgot-password-container a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password-container p,
+.register-container p {
+    color: var(--muted-text);
+    font-size: .82rem;
+}
+
+.register-container {
+    margin-top: 9px;
+    margin-bottom: 0;
+}
+
+.register-container a {
+    color: var(--links);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    body { padding: 18px 12px; }
+    .container { padding: 30px 22px 26px; }
+}

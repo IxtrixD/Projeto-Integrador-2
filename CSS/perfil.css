@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap');
+
+.profile-page {
+    width: min(100% - 40px, 1100px);
+    margin: 0 auto;
+    padding: 52px 0 72px;
+}
+
+.profile-intro { 
+    margin-bottom: 30px; 
+}
+
+.eyebrow,
+.section-label {
+    margin: 0 0 6px;
+    color: #2d9188;
+    font-size: .74rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.profile-intro h1,
+.identity-card h2,
+.details-card h2 {
+    margin: 0;
+    color: #183b3b;
+    font-family: 'Manrope', sans-serif;
+}
+
+.profile-intro h1 {
+    font-size: clamp(1.8rem, 4vw, 2.55rem);
+    letter-spacing: -.03em;
+}
+
+.profile-intro > p:last-child {
+    margin: 8px 0 0;
+    color: #6d8583;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: minmax(230px, .72fr) minmax(0, 1.5fr);
+    gap: 18px;
+    align-items: stretch;
+}
+
+.identity-card,
+.details-card {
+    border: 1px solid #d8e7e3;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.identity-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 34px 24px;
+    text-align: center;
+}
+
+.identity-avatar {
+    display: grid;
+    width: 92px;
+    height: 92px;
+    margin-bottom: 18px;
+    place-items: center;
+    border: 1px solid #c8dfdb;
+    border-radius: 50%;
+    background: #e4f1ee;
+    color: #237d75;
+    font-size: 3.1rem;
+}
+
+.identity-card h2 { 
+    font-size: 1.3rem; 
+}
+
+.identity-role {
+    margin: 5px 0 14px;
+    color: #718684;
+    font-size: .9rem;
+}
+
+.active-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #2e9185;
+    font-size: .77rem;
+    font-weight: 700;
+}
+
+.active-badge i { font-size: 1rem; }
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    margin-top: 26px;
+    padding: 11px 16px;
+    border-radius: 5px;
+    background: #287f76;
+    color: #fff;
+    font-size: .87rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.primary-button:hover { 
+    background: #1d655f; 
+}
+
+.details-card { 
+    padding: 28px; 
+}
+
+.card-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2eeeb;
+}
+
+.details-card h2 { 
+    font-size: 1.25rem; 
+}
+
+.card-heading__icon {
+    color: #398f87;
+    font-size: 1.6rem;
+}
+
+.details-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 28px;
+    margin: 0;
+}
+
+.detail-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e2eeeb;
+}
+
+.detail-item dt {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #718684;
+    font-size: .8rem;
+}
+
+.detail-item dt i { 
+    color: #398f87; font-size: 1.05rem; 
+}
+
+.detail-item dd {
+    margin: 7px 0 0;
+    color: #183b3b;
+    font-size: .97rem;
+    font-weight: 600;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 16px;
+    border: 1px solid #e3b9b4;
+    border-radius: 5px;
+    background: #fff;
+    color: #b3544b;
+    font-size: .87rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.logout-button:hover {
+    background: #fff1ef;
+    color: #963d36;
+}
+
+@media (max-width: 620px) {
+    .profile-page { width: min(100% - 28px, 520px); padding-top: 34px; }
+    .profile-layout { grid-template-columns: 1fr; }
+    .identity-card { padding: 28px 20px; }
+    .details-card { padding: 22px 20px; }
+    .details-list { grid-template-columns: 1fr; }
+    .profile-actions { justify-content: stretch; }
+    .logout-button { width: 100%; box-sizing: border-box; }
+}
+
+html.dark-theme body .profile-intro h1,
+html.dark-theme body .identity-card h2,
+html.dark-theme body .details-card h2,
+html.dark-theme body .detail-item dd {
+    color: var(--heading);
+}
+
+html.dark-theme body .profile-intro > p:last-child,
+html.dark-theme body .identity-role,
+html.dark-theme body .detail-item dt {
+    color: var(--muted);
+}
+
+html.dark-theme body .identity-card,
+html.dark-theme body .details-card {
+    border-color: var(--border);
+    background: var(--surface);
+}
+
+html.dark-theme body .identity-avatar {
+    border-color: #3a5d5d;
+    background: #214543;
+    color: #9de0d3;
+}
+
+html.dark-theme body .card-heading,
+html.dark-theme body .detail-item {
+    border-color: var(--border);
+}
+
+html.dark-theme body .logout-button {
+    border-color: #81524e;
+    background: #2b2022;
+    color: #f0aaa2;
+}
+
+html.dark-theme body .logout-button:hover {
+    background: #402729;
+    color: #ffc1b9;
+}
