@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários disponíveis</title>
+    <script src="../JS/theme.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/theme.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/agendamento.css">
+</head>
+<body>
+    <header class="topbar">
+        <span class="logo">✦ UnitOdonto</span>
+        <label class="config">
+            <a class="back" href="home.html" aria-label="Voltar para a home" title="Voltar para a home">
+                <i class="bx bx-arrow-back arrow-back"></i>
+            </a>
+        </label>
+    </header>
+
+    <main class="schedule-page">
+        <section class="page-intro" aria-labelledby="page-title">
+            <p class="eyebrow">Agenda da clínica</p>
+            <h1 id="page-title">Horários disponíveis</h1>
+            <p>Consulte os horários que já estão livres para atendimento.</p>
+        </section>
+
+        <section class="availability-panel" aria-labelledby="availability-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="section-label">Próximos dias</p>
+                    <h2 id="availability-title">Escolha uma data para visualizar</h2>
+                </div>
+                <span class="availability-note"><i class="bx bx-info-circle"></i> Apenas horários existentes</span>
+            </div>
+
+            <div class="date-picker-wrapper">
+                <button class="date-trigger" type="button" aria-expanded="false" aria-controls="datePickerList">
+                    <i class="bx bx-calendar"></i>
+                    <span id="dateTriggerLabel">Selecionar data</span>
+                    <i class="bx bx-chevron-down"></i>
+                </button>
+                <div class="date-picker" id="datePickerList" role="group" aria-label="Dias com horários disponíveis"></div>
+            </div>
+
+            <div class="selected-day">
+                <i class="bx bx-calendar"></i>
+                <span>Horários de <strong id="selectedDay">carregando</strong></span>
+            </div>
+
+            <p class="schedule-status" id="scheduleStatus" role="status" aria-live="polite">Carregando horários...</p>
+            <div class="time-list" id="timeList" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="../JS/consultation-dialog.js"></script>
+    <script src="../JS/agendamento.js"></script>
+</body>
+</html>

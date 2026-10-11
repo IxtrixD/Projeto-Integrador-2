@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../JS/theme.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/theme.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/agendamento.css">
+</head>
+<body>
+    <header class="topbar">
+        <span class="logo">
+            ✦ UnitOdonto
+        </span>
+            <div class="config">
+                <i class="bx bx-bell" aria-hidden="true"></i>
+                <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" title="Ativar tema escuro" aria-pressed="false">
+                    <i class="bx bx-moon theme-icon" aria-hidden="true"></i>
+                </button>
+            </div>
+    </header>
+
+    <main>
+        <section class="welcome-section" aria-labelledby="welcome-title">
+            <div>
+                <h1 id="welcome-title">Sua área</h1>
+                <p class="welcome-copy">Acompanhe seus próximos cuidados e mantenha seu sorriso em dia.</p>
+            </div>
+        </section>
+
+        <section class="profile-card" aria-labelledby="profile-title">
+            <div class="profile-card__identity">
+                <div class="profile-card__avatar"><i class="bx bx-user"></i></div>
+                <div>
+                    <p class="section-label">Perfil do paciente</p>
+                    <h2 id="profile-title">Nome Paciente</h2>
+                    <p class="profile-meta"><i class="bx bx-envelope"></i> paciente@clinica.com</p>
+                </div>
+            </div>
+            <a class="outline-button" href="perfil.html">Ver perfil <i class="bx bx-right-arrow-alt"></i></a>
+        </section>
+
+        <section class="appointments-section" aria-labelledby="appointments-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Sua agenda</p>
+                    <h2 id="appointments-title">Consultas marcadas</h2>
+                </div>
+                <a class="primary-button" href="agendamento.html">
+                    <i class="bx bx-plus"></i> Agendar consulta
+                </a>
+            </div>
+
+            <p class="appointment-feedback" id="appointmentFeedback" role="status" aria-live="polite">Carregando consultas...</p>
+            <div class="appointment-list" id="appointmentList"></div>
+        </section>
+    </main>
+
+    <script src="../JS/consultation-dialog.js"></script>
+    <script src="../JS/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultas Marcadas</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="phone-shell">
+      <header class="topbar">
+        <div>
+          <p class="section-label">Olá,</p>
+          <h1 id="userName">Paciente</h1>
+        </div>
+        <button class="icon-button" id="logoutBtn" aria-label="Sair">↩</button>
+      </header>
+
+      <main class="screen app-screen">
+        <section class="hero-card">
+          <div>
+            <p class="eyebrow">Próximas consultas</p>
+            <h2>Agenda</h2>
+          </div>
+          <span class="pill" id="appointmentCounter">0</span>
+        </section>
+
+        <section class="list-section">
+          <h3>Consultas marcadas</h3>
+          <div id="scheduledList" class="appointment-list"></div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav">
+        <a class="nav-item active" href="consultas-marcadas.html">
+          <span>🗓️</span>
+          <small>Agenda</small>
+        </a>
+        <a class="nav-item" href="consultas-disponiveis.html">
+          <span>📅</span>
+          <small>Disponíveis</small>
+        </a>
+        <a class="nav-item" href="perfil.html">
+          <span>👤</span>
+          <small>Perfil</small>
+        </a>
+      </nav>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

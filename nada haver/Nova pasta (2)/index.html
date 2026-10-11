@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f6f2" />
+  <title>Sorriso | Consultas odontológicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section class="login-view" id="loginView">
+      <div class="login-art" aria-hidden="true">
+        <div class="art-topline"><span class="brand-mark">✦</span> Sorriso</div>
+        <div class="art-copy">
+          <p class="eyebrow">Seu cuidado, no seu tempo</p>
+          <h1>Um sorriso saudável começa com um <em>bom encontro.</em></h1>
+          <p>Encontre o melhor horário para você e cuide do seu sorriso com leveza.</p>
+        </div>
+        <div class="tooth-orbit"><span>✦</span></div>
+      </div>
+      <div class="login-panel">
+        <div class="mobile-brand"><span class="brand-mark">✦</span> Sorriso</div>
+        <div class="login-heading">
+          <p class="eyebrow">Bem-vinda de volta</p>
+          <h2>Olá, Mariana</h2>
+          <p>Entre para continuar seu cuidado.</p>
+        </div>
+        <form id="loginForm" class="login-form">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" value="mariana@email.com" autocomplete="email" required />
+          <label for="password">Senha</label>
+          <div class="password-field"><input id="password" type="password" value="sorriso123" autocomplete="current-password" required /><button type="button" class="icon-button" id="togglePassword" aria-label="Mostrar senha">◉</button></div>
+          <div class="form-row"><label class="check-label"><input type="checkbox" checked /> <span>Manter conectado</span></label><a href="#" id="forgotPassword">Esqueci minha senha</a></div>
+          <button class="primary-button" type="submit">Entrar <span>→</span></button>
+        </form>
+        <p class="signup-text">Ainda não tem uma conta? <a href="#" id="createAccount">Criar conta</a></p>
+        <p class="demo-hint">Modo demonstração: qualquer e-mail e senha funcionam.</p>
+      </div>
+    </section>
+
+    <section class="main-view hidden" id="mainView">
+      <header class="topbar">
+        <a class="brand" href="#available" data-screen="available"><span class="brand-mark">✦</span> Sorriso</a>
+        <div class="topbar-actions"><button class="notification-button" aria-label="Notificações"><span></span>♧</button><button class="avatar avatar-small" data-screen="profile" aria-label="Abrir perfil">MC</button></div>
+      </header>
+      <main class="content-area">
+        <div class="screen hidden" id="availableScreen">
+          <div class="welcome-row"><div><p class="eyebrow">Quarta-feira, 12 de junho</p><h1>Encontre seu <em>horário.</em></h1><p class="subheading">Olá, Mariana. Vamos cuidar do seu sorriso?</p></div><div class="avatar avatar-large">MC</div></div>
+          <div class="highlight-banner"><div class="banner-icon">✦</div><div><strong>Seu sorriso merece atenção</strong><p>Uma avaliação hoje pode transformar seu amanhã.</p></div><span class="banner-sparkle">✧</span></div>
+          <div class="section-heading"><div><p class="eyebrow">Agenda da clínica</p><h2>Horários disponíveis</h2></div><button class="filter-button" id="filterButton">Este mês <span>⌄</span></button></div>
+          <div class="date-scroller" id="dateScroller"></div>
+          <div class="appointment-list" id="appointmentList"></div>
+        </div>
+        <div class="screen hidden" id="bookedScreen">
+          <div class="page-heading"><p class="eyebrow">Sua agenda</p><h1>Consultas <em>marcadas.</em></h1><p class="subheading">Tudo organizado para você cuidar do seu sorriso.</p></div>
+          <div class="booked-list" id="bookedList"></div>
+        </div>
+        <div class="screen hidden" id="profileScreen">
+          <div class="page-heading"><p class="eyebrow">Sua conta</p><h1>Seu <em>perfil.</em></h1><p class="subheading">Mantenha seus dados sempre atualizados.</p></div>
+          <div class="profile-card"><div class="profile-hero"><div class="avatar avatar-profile">MC</div><div><h2>Mariana Costa</h2><p>Paciente desde junho de 2023</p></div><button class="edit-button" id="editProfile">Editar</button></div><div class="profile-details"><div><span>E-mail</span><strong>mariana@email.com</strong></div><div><span>Telefone</span><strong>(11) 98765-4321</strong></div><div><span>Data de nascimento</span><strong>24 de setembro de 1996</strong></div></div></div>
+          <button class="logout-button" id="logoutButton">Sair da conta <span>↗</span></button>
+        </div>
+      </main>
+      <nav class="bottom-nav" aria-label="Navegação principal"><button data-screen="available" class="nav-item active"><span>⌂</span><small>Disponíveis</small></button><button data-screen="booked" class="nav-item"><span>▣</span><small>Minhas consultas</small><b id="bookedCount">0</b></button><button data-screen="profile" class="nav-item"><span>◉</span><small>Perfil</small></button></nav>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

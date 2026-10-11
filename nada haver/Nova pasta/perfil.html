@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do usuário</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/perfil.css">
+</head>
+<body>
+    <header class="topbar">
+        <span class="logo">✦ UnitOdonto</span>
+        <label class="config">
+            <a class="back" href="home.html" aria-label="Voltar para a home">
+                <i class="bx bx-arrow-back arrow-back"></i>
+            </a>
+        </label>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-intro" aria-labelledby="profile-title">
+            <p class="eyebrow">Minha conta</p>
+            <h1 id="profile-title">Meu perfil</h1>
+            <p>Confira seus dados e mantenha suas informações atualizadas.</p>
+        </section>
+
+        <section class="profile-layout" aria-label="Informações do paciente">
+            <article class="identity-card">
+                <div class="identity-avatar" aria-hidden="true"><i class="bx bx-user"></i></div>
+                <h2>Nome Paciente</h2>
+                <p class="identity-role">Paciente UnitOdonto</p>
+                <span class="active-badge"><i class="bx bxs-check-circle"></i> Cadastro ativo</span>
+                <a class="primary-button" href="#dados-pessoais"><i class="bx bx-edit-alt"></i> Editar perfil</a>
+            </article>
+
+            <article class="details-card" id="dados-pessoais">
+                <div class="card-heading">
+                    <div>
+                        <p class="section-label">Dados pessoais</p>
+                        <h2>Informações da conta</h2>
+                    </div>
+                    <i class="bx bx-id-card card-heading__icon" aria-hidden="true"></i>
+                </div>
+
+                <dl class="details-list">
+                    <div class="detail-item">
+                        <dt><i class="bx bx-user"></i> Nome completo</dt>
+                        <dd>Nome Paciente</dd>
+                    </div>
+                    <div class="detail-item">
+                        <dt><i class="bx bx-envelope"></i> E-mail</dt>
+                        <dd>paciente@clinica.com</dd>
+                    </div>
+                    <div class="detail-item">
+                        <dt><i class="bx bx-phone"></i> Telefone</dt>
+                        <dd>(11) 99999-9999</dd>
+                    </div>
+                    <div class="detail-item">
+                        <dt><i class="bx bx-calendar"></i> Data de nascimento</dt>
+                        <dd>Não informado</dd>
+                    </div>
+                </dl>
+            </article>
+        </section>
+
+        <div class="profile-actions">
+            <a class="logout-button" href="../index.html">
+                <i class="bx bx-log-out"></i> Sair da conta
+            </a>
+        </div>
+    </main>
+    <script src="../JS/perfil.js"></script>
+</body>
+</html>

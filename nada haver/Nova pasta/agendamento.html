@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários disponíveis</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/agendamento.css">
+</head>
+<body>
+    <header class="topbar">
+        <span class="logo">✦ UnitOdonto</span>
+        <label class="config">
+            <a class="back" href="home.html" aria-label="Voltar para a home" title="Voltar para a home">
+                <i class="bx bx-arrow-back arrow-back"></i>
+            </a>
+        </label>
+    </header>
+
+    <main class="schedule-page">
+        <section class="page-intro" aria-labelledby="page-title">
+            <p class="eyebrow">Agenda da clínica</p>
+            <h1 id="page-title">Horários disponíveis</h1>
+            <p>Consulte os horários que já estão livres para atendimento.</p>
+        </section>
+
+        <section class="availability-panel" aria-labelledby="availability-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="section-label">Próximos dias</p>
+                    <h2 id="availability-title">Escolha uma data para visualizar</h2>
+                </div>
+                <span class="availability-note"><i class="bx bx-info-circle"></i> Apenas horários existentes</span>
+            </div>
+
+            <div class="date-picker" role="group" aria-label="Dias com horários disponíveis">
+                <button class="date-option is-selected" type="button" data-day="quinta-feira, 18 de setembro" aria-pressed="true">
+                    <span>QUI</span><strong>18</strong><small>SET</small>
+                </button>
+                <button class="date-option" type="button" data-day="sexta-feira, 19 de setembro" aria-pressed="false">
+                    <span>SEX</span><strong>19</strong><small>SET</small>
+                </button>
+                <button class="date-option" type="button" data-day="segunda-feira, 22 de setembro" aria-pressed="false">
+                    <span>SEG</span><strong>22</strong><small>SET</small>
+                </button>
+                <button class="date-option" type="button" data-day="terça-feira, 23 de setembro" aria-pressed="false">
+                    <span>TER</span><strong>23</strong><small>SET</small>
+                </button>
+            </div>
+
+            <div class="selected-day">
+                <i class="bx bx-calendar"></i>
+                <span>Horários de <strong id="selectedDay">quinta-feira, 18 de setembro</strong></span>
+            </div>
+
+            <div class="time-list" id="timeList">
+                <article class="time-slot">
+                    <div class="time-slot__time"><i class="bx bx-time-five"></i><strong>09:30</strong></div>
+                    <div class="time-slot__details"><h3>Limpeza e prevenção</h3><p><i class="bx bx-map"></i> Unidade Centro</p></div>
+                    <div class="time-slot__actions">
+                        <span class="available-tag"><i class="bx bx-check-circle"></i> Disponível</span>
+                        <button class="schedule-button" type="button">Agendar</button>
+                    </div>
+                </article>
+                <article class="time-slot">
+                    <div class="time-slot__time"><i class="bx bx-time-five"></i><strong>11:00</strong></div>
+                    <div class="time-slot__details"><h3>Avaliação odontológica</h3><p><i class="bx bx-map"></i> Unidade Centro</p></div>
+                    <div class="time-slot__actions">
+                        <span class="available-tag"><i class="bx bx-check-circle"></i> Disponível</span>
+                        <button class="schedule-button" type="button">Agendar</button>
+                    </div>
+                </article>
+                <article class="time-slot">
+                    <div class="time-slot__time"><i class="bx bx-time-five"></i><strong>15:30</strong></div>
+                    <div class="time-slot__details"><h3>Consulta de rotina</h3><p><i class="bx bx-map"></i> Unidade Centro</p></div>
+                    <div class="time-slot__actions">
+                        <span class="available-tag"><i class="bx bx-check-circle"></i> Disponível</span>
+                        <button class="schedule-button" type="button">Agendar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="../JS/agendamento.js"></script>
+</body>
+</html>
